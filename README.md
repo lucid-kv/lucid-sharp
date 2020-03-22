@@ -1,6 +1,6 @@
 # lucid-csharp
 
-Lucid wrapper for the C# language.
+Lucid KV wrapper for the C# language.
 
 ### Dependency Injection
 
@@ -9,7 +9,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     services.AddLucid(options =>
     {
-        options.Endpoint = "http://localhost:7021/api/";
+        options.Endpoint = "https://lucid-kv.herokuapp.com/";
     });
 
     services.AddControllers();
