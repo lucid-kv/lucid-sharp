@@ -1,9 +1,11 @@
-﻿namespace Lucid
+﻿using System.Net;
+
+namespace Lucid
 {
     public interface ILucid
     {
-        void Set(string key, string value);
-        void Get(string key);
-        void Drop(string key);
+        HttpStatusCode Set(string key, string value);
+        string Get(string key);
+        HttpStatusCode Drop(string key);
     }
 }
