@@ -1,4 +1,4 @@
-# lucid-csharp
+# lucid-sharp
 
 Lucid KV wrapper for the C# language.
 
