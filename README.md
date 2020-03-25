@@ -7,9 +7,10 @@ Lucid KV wrapper for the C# language.
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddLucid(options =>
+    services.AddLucidCache(options =>
     {
-        options.Endpoint = "https://lucid-kv.herokuapp.com/";
+        options.Configuration = "https://lucid-kv.herokuapp.com/";
+        options.InstanceName = "SampleInstance";
     });
 
     services.AddControllers();

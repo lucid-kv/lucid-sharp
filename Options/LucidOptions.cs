@@ -1,4 +1,4 @@
-﻿namespace Lucid.Extensions.DependencyInjection
+﻿namespace Lucid.Options
 {
     public class LucidOptions
     {
