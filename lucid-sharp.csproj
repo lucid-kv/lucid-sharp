@@ -8,10 +8,24 @@
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/56896360</PackageIconUrl>
     <PackageLicenseUrl>https://github.com/lucid-kv/lucid-csharp/blob/master/LICENSE.md</PackageLicenseUrl>
     <Owners>Lucid KV</Owners>
-    <PackageProjectUrl>https://github.com/lucid-kv/lucid-csharp</PackageProjectUrl>
-    <PackageReleaseNotes>Add Set, Get, Delete methods</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/lucid-kv/lucid</PackageProjectUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <Summary>Lucid KV wrapper for the C# language.</Summary>
     <Title>Lucid KV wrapper for the C# language.</Title>
+    <Description>High performance and distributed KV store accessible through an HTTP API. 🦀
+
+Features:
+- Persistence
+- Encryption
+- Server-sent Events (SSE)
+- Compression
+- Replication
+
+Read more here: https://medium.com/@clintnetwork/lucid-an-http-key-value-store-c0e734586e26</Description>
+    <RepositoryUrl>https://github.com/lucid-kv/lucid-sharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>lucid,csharp,key-value,kv,kv-store,distributed-cache</PackageTags>
+    <Company>Lucid KV</Company>
   </PropertyGroup>
 
   <ItemGroup>
