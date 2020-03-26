@@ -26,7 +26,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddLucidCache(options =>
     {
         options.Configuration = "https://lucid-kv.herokuapp.com/";
-        options.InstanceName = "SampleInstance";
+        options.InstanceName = "LucidPublicNode";
     });
 
     services.AddControllers();
@@ -38,14 +38,18 @@ Consume it with dependency injection (DI)
 ```csharp
 public class HomeController : Controller
 {
-    public HomeController(LucidCache lucidCache)
+    private readonly IDistributedCache _distributedCache;
+
+    public HomeController(IDistributedCache distributedCache)
     {
-        _lucidCache = lucidCache;
+        _distributedCache = distributedCache;
     }
-    
-    public void Test()
+
+    public IActionResult Index()
     {
-        _lucidCache.Set("test", Encoding.UTF8.GetBytes("Hey"));
+        _distributedCache.SetString("hello_world", "Hello Workd!");
+        # Hello World! is written in https://lucid-kv.herokuapp.com/api/kv/hello_world
+        return View();
     }
 }
 ```
