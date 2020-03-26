@@ -47,8 +47,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        _distributedCache.SetString("hello_world", "Hello Workd!");
-        # Hello World! is written in https://lucid-kv.herokuapp.com/api/kv/hello_world
+        // Store String
+        // Hello World! is written in https://lucid-kv.herokuapp.com/api/kv/hello_world
+        _distributedCache.SetString("hello_world", "Hello World!");        
+
+        // Directly store an image
+        _distributedCache.Set("hello_world", System.IO.File.ReadAllBytes("/tmp/profile_picture.jpg"));
         return View();
     }
 }
