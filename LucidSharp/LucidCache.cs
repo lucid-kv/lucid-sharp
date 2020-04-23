@@ -1,5 +1,7 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
+using EvtSource;
 using LucidSharp.Helpers;
 using Microsoft.Extensions.Caching.Distributed;
 using RestSharp;
