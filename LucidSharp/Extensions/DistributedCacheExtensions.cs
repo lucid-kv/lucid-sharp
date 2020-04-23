@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace Lucid.Extensions
+namespace LucidSharp.Extensions
 {
     public static class DistributedCacheExtensions
     {

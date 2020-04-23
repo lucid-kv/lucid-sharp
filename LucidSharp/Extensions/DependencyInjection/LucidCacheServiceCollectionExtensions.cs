@@ -1,10 +1,10 @@
 ﻿using System;
 using Lucid.Helpers;
-using Lucid.Options;
+using LucidSharp.Options;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lucid.Extensions.DependencyInjection
+namespace LucidSharp.Extensions.DependencyInjection
 {
     public static class LucidCacheServiceCollectionExtensions
     {

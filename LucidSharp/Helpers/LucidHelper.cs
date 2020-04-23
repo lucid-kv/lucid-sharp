@@ -1,5 +1,5 @@
 using System;
-using Lucid.Options;
+using LucidSharp.Options;
 using Microsoft.Extensions.Options;
 
 namespace Lucid.Helpers

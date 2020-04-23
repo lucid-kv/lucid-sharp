@@ -4,7 +4,7 @@ using Lucid.Helpers;
 using Microsoft.Extensions.Caching.Distributed;
 using RestSharp;
 
-namespace Lucid
+namespace LucidSharp
 {
     public class LucidCache : IDistributedCache
     {

@@ -1,4 +1,4 @@
-﻿namespace Lucid.Options
+﻿namespace LucidSharp.Options
 {
     public class LucidOptions
     {

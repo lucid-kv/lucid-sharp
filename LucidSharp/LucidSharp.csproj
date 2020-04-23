@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Lucid</RootNamespace>
     <PackOnBuild>true</PackOnBuild>
     <Copyright>Copyright © Lucid KV - All Rights Reserved</Copyright>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/56896360</PackageIconUrl>
