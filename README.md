@@ -6,7 +6,7 @@
     lucid-sharp
   </h3>
   <p align="center">
-    Lucid KV Wrapper for C# / .NetCore Language
+    Lucid KV Client for C# / .NetCore Language
   </p>
   <p align="center">
     <a href="https://github.com/lucid-kv/lucid/actions?workflow=Lucid"><img src="https://github.com/lucid-kv/lucid/workflows/Lucid/badge.svg" /></a>
@@ -33,8 +33,8 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Consume it with dependency injection (DI)
----
+### Consume it with dependency injection (DI)
+
 ```csharp
 public class HomeController : Controller
 {
