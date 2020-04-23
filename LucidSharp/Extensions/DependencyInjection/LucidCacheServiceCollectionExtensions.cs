@@ -25,7 +25,10 @@ namespace LucidSharp.Extensions.DependencyInjection
 
             services.AddOptions();
             services.Configure(setupAction);
+            
             services.AddTransient<LucidHelper>();
+            services.AddSingleton<LucidNotifications>();
+            
             services.Add(ServiceDescriptor.Singleton<IDistributedCache, LucidCache>());
 
             return services;

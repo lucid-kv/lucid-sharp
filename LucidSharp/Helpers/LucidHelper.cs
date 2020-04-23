@@ -20,5 +20,13 @@ namespace LucidSharp.Helpers
                 Path = "/api/kv/" + key
             }.Uri.ToString();
         }
+        
+        public string BuildNotificationsUri()
+        {
+            return new UriBuilder(_options.Configuration)
+            {
+                Path = "/notifications"
+            }.Uri.ToString();
+        }
     }
 }
