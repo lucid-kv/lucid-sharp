@@ -13,15 +13,15 @@ namespace Lucid.Extensions.DependencyInjection
         /// </summary>
         public static IServiceCollection AddLucidCache(this IServiceCollection services, Action<LucidCacheOptions> setupAction)
         {
-            // if (services == null)
-            // {
-            //     throw new ArgumentNullException(nameof(services));
-            // }
-            //
-            // if (setupAction == null)
-            // {
-            //     throw new ArgumentNullException(nameof(setupAction));
-            // }
+            if (services == null)
+            {
+                throw new ArgumentNullException(nameof(services));
+            }
+            
+            if (setupAction == null)
+            {
+                throw new ArgumentNullException(nameof(setupAction));
+            }
 
             services.AddOptions();
             services.Configure(setupAction);
