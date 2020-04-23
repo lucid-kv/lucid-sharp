@@ -50,12 +50,11 @@ namespace Lucid
 
         public void Refresh(string key)
         {
-            throw new System.NotImplementedException();
         }
 
         public Task RefreshAsync(string key, CancellationToken token = new CancellationToken())
         {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask;
         }
 
         public void Remove(string key)
