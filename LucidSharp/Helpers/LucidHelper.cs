@@ -2,7 +2,7 @@ using System;
 using LucidSharp.Options;
 using Microsoft.Extensions.Options;
 
-namespace Lucid.Helpers
+namespace LucidSharp.Helpers
 {
     public class LucidHelper
     {

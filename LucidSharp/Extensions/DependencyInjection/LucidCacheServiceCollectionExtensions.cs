@@ -1,5 +1,5 @@
 ﻿using System;
-using Lucid.Helpers;
+using LucidSharp.Helpers;
 using LucidSharp.Options;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
