@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace LucidSharpTests
 {
-	public class Tests
+	public class KvTests
 	{
 		private IDistributedCache _lucidCache;
 

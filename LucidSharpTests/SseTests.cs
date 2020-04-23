@@ -1,4 +1,7 @@
 using System;
+using System.Threading;
+using System.Threading.Tasks;
+using LucidSharp;
 using LucidSharp.Extensions.DependencyInjection;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
@@ -6,9 +9,10 @@ using NUnit.Framework;
 
 namespace LucidSharpTests
 {
-	public class Tests
+	public class SseTests
 	{
 		private IDistributedCache _lucidCache;
+		private LucidNotifications _lucidNotifications;
 
 		[SetUp]
 		public void Setup()
@@ -21,27 +25,23 @@ namespace LucidSharpTests
 				})
 				.BuildServiceProvider();
 			_lucidCache = serviceProvider.GetRequiredService<IDistributedCache>();
+			_lucidNotifications = serviceProvider.GetRequiredService<LucidNotifications>();
 		}
 
 		[Test, Order(1)]
-		public void Set()
+		public async Task GetNotification()
 		{
+			var isPassed = false;
+			_lucidNotifications.EventSource.MessageReceived += (sender, args) =>
+			{
+				if (args.Event.Equals("lucid-sharp"))
+				{
+					isPassed = true;
+				}
+			};
 			_lucidCache.SetString("lucid-sharp", "Hello World!");
-			Assert.Pass();
-		}
-
-		[Test, Order(2)]
-		public void Get()
-		{
-			var value = _lucidCache.GetString("lucid-sharp");
-			Assert.AreEqual(value, "Hello World!");
-		}
-
-		[Test, Order(3)]
-		public void Delete()
-		{
-			_lucidCache.Remove("lucid-sharp");
-			Assert.Pass();
+			await Task.Delay(TimeSpan.FromSeconds(10));
+			Assert.IsTrue(isPassed);
 		}
 	}
 }
