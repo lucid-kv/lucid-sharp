@@ -23,8 +23,10 @@ Features:
 Read more here: https://medium.com/@clintnetwork/lucid-an-http-key-value-store-c0e734586e26</Description>
     <RepositoryUrl>https://github.com/lucid-kv/lucid-sharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>lucid,csharp,key-value,kv,kv-store,distributed-cache</PackageTags>
+    <PackageTags>lucid,csharp,key-value,kv,kv-store,distributed-cache,lucid-kv</PackageTags>
     <Company>Lucid KV</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
